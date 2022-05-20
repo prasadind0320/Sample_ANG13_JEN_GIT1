@@ -45,9 +45,13 @@ node {
         sh 'npm run build'
     }
     stage ('Create Docker Image') {
+     agent any
+      steps {
         sh 'docker build -t muralipalaka/angularapppipelineimg:latest .'
+      } 
     }
     stage ('Push to Docker Hub') {
+        agent any
         steps {
         withCredentials([usernamePassword(credentialsId: 'Dockerhub_ID', passwordVariable: 'Dockerhub_IDPassword', usernameVariable: 'Dockerhub_IDUser')]) {
           sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
@@ -56,7 +60,11 @@ node {
       }
     }
     stage ('Run the app') {
+     agent any
+      steps {
         sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
+      } 
+        
     }
   
 }
