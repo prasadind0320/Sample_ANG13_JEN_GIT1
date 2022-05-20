@@ -36,20 +36,30 @@ pipeline {
     }
     agent any
     stages { 
-        stage('Checkout'){
-        git branch:'master', url: 'https://github.com/prasadind0320/Sample_ANG13_JEN_GIT1.git'
+    stage('Checkout'){
+        steps {
+            git branch:'master', url: 'https://github.com/prasadind0320/Sample_ANG13_JEN_GIT1.git'
+        }
     }
     stage ('Install dependency') {
-        sh 'npm install'
+        steps {
+            sh 'npm install'
+        }
     } 
     stage ('Testing Stage') {
-        sh 'ng test --no-watch --code-coverage'
+        steps {
+            sh 'ng test --no-watch --code-coverage'
+        }
     }
     stage('Sonar Scanner Coverage') {
-        sh "npm run sonar"
+        steps {
+            sh "npm run sonar"
+        }
     }
     stage('Make Prod Build') {
-        sh 'npm run build'
+        steps {
+            sh 'npm run build'
+        }
     }
     stage ('Create Docker Image') {
       steps {
