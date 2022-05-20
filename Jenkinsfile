@@ -28,8 +28,15 @@
 //     }
 // }
 
-node {
-    stage('Checkout'){
+pipeline { 
+    environment { 
+        registry = "" 
+        registryCredential = 'dockerhub_id'
+        dockerImage = ''  
+    }
+    agent any
+    stages { 
+        stage('Checkout'){
         git branch:'master', url: 'https://github.com/prasadind0320/Sample_ANG13_JEN_GIT1.git'
     }
     stage ('Install dependency') {
@@ -45,26 +52,28 @@ node {
         sh 'npm run build'
     }
     stage ('Create Docker Image') {
-     agent any
       steps {
         sh 'docker build -t muralipalaka/angularapppipelineimg:latest .'
       } 
     }
     stage ('Push to Docker Hub') {
-        agent any
         steps {
-        withCredentials([usernamePassword(credentialsId: 'Dockerhub_ID', passwordVariable: 'Dockerhub_IDPassword', usernameVariable: 'Dockerhub_IDUser')]) {
-          sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-          sh 'docker push muralipalaka/angularapppipelineimg:latest'
+        // withCredentials([usernamePassword(credentialsId: 'Dockerhub_ID', passwordVariable: 'Dockerhub_IDPassword', usernameVariable: 'Dockerhub_IDUser')]) {
+        //   sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
+        //   sh 'docker push muralipalaka/angularapppipelineimg:latest'
+        // }
+        script { 
+            docker.withRegistry( '', registryCredential ) {
+                sh 'docker push muralipalaka/angularapppipelineimg:latest'
+            }
         }
       }
     }
     stage ('Run the app') {
-     agent any
       steps {
         sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
       } 
         
     }
-  
+    }
 }
