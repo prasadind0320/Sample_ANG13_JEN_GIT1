@@ -36,7 +36,7 @@ node {
         sh 'npm install'
     } 
     stage ('Testing Stage') {
-        sh 'npx ng test --no-watch --code-coverage'
+        sh 'ng test --no-watch --code-coverage'
     }
     stage('Sonar Scanner Coverage') {
         sh "npm run sonar"
