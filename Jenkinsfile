@@ -45,18 +45,18 @@ node {
         sh 'npm run build'
     }
     stage ('Create Docker Image') {
-        sh 'docker build -t muralipalaka/angularappPLimg:latest .'
+        sh 'docker build -t muralipalaka/angularapppipelineimg:latest .'
     }
     stage ('Push to Docker Hub') {
         steps {
         withCredentials([usernamePassword(credentialsId: 'Dockerhub_ID', passwordVariable: 'Dockerhub_IDPassword', usernameVariable: 'Dockerhub_IDUser')]) {
           sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-          sh 'docker push muralipalaka/angularappPLimg:latest'
+          sh 'docker push muralipalaka/angularapppipelineimg:latest'
         }
       }
     }
     stage ('Run the app') {
-        sh 'docker run -d -p 80:80 muralipalaka/angularappPLimg:latest'
+        sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
     }
   
 }
