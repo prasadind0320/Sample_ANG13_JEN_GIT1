@@ -1,5 +1,6 @@
 pipeline { 
     environment { 
+        //registry = "YourDockerhubAccount/YourRepository" 
         registry = "" 
         registryCredential = 'Dockerhub_ID'
         dockerImage = ''  
@@ -34,6 +35,7 @@ pipeline {
     stage ('Create Docker Image') {
       steps {
         sh 'docker build -t muralipalaka/angularapppipelineimg:latest .'
+        //dockerImage = docker.build registry + ":$BUILD_NUMBER"
       } 
     }
     stage ('Push to Docker Hub') {
@@ -45,6 +47,7 @@ pipeline {
         script { 
             docker.withRegistry( '', registryCredential ) {
                 sh 'docker push muralipalaka/angularapppipelineimg:latest'
+                // dockerImage.push() 
             }
         }
       }
@@ -53,7 +56,11 @@ pipeline {
       steps {
         sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
       } 
-        
     }
+    // stage('Cleaning up') { 
+    //     steps { 
+    //         sh "docker rmi $registry:$BUILD_NUMBER" 
+    //     }
+    // }
     }
 }
