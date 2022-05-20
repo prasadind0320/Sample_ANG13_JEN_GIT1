@@ -44,3 +44,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#unwanted files
+.browserslistrc.bak
+package.json.bak
