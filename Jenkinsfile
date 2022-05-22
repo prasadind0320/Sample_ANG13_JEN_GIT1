@@ -60,16 +60,16 @@ pipeline {
         }
       }
     }
-    stage ('Run the app') {
-      steps {
-        sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
-      } 
-    }
+    // stage ('Run the app') {
+    //   steps {
+    //     sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
+    //   } 
+    // }
     stage ('Run container on dev server') {
         //def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
       steps {
         sshagent(['dev-server']){
-            sh 'ssh -o StrictHostKeyChecking=no muralipalaka@104.211.247.210 docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
+            sh 'ssh -o StrictHostKeyChecking=no muralipalaka@104.211.247.210 docker run -p 8080:80 -d -name muralipalaka/angularapppipelineimg:latest'
         }
         
       } 
