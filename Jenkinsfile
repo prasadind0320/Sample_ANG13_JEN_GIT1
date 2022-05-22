@@ -66,9 +66,12 @@ pipeline {
       } 
     }
     stage ('Run container on dev server') {
-        def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
+        //def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
+      steps {
         sshAgent(['dev-server']){
-            sh 'ssh -o StrictHostKeyChecking=no muralipalaka@104.211.247.210 ${dockerRun}'
+            sh 'ssh -o StrictHostKeyChecking=no muralipalaka@104.211.247.210 docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
+        }
+        
       } 
     }
     // stage('Cleaning up') { 
