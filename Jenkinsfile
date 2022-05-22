@@ -3,7 +3,8 @@ pipeline {
         //registry = "YourDockerhubAccount/YourRepository" 
         registry = "" 
         registryCredential = 'Dockerhub_ID'
-        dockerImage = ''  
+        dockerImage = '' 
+        dockerRun='docker run -p 8080:80 -d -name muralipalaka/angularapppipelineimg:latest' 
     }
     agent any
     stages { 
@@ -69,7 +70,7 @@ pipeline {
         //def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
       steps {
         sshagent(['dev-server']){
-            sh 'ssh -o StrictHostKeyChecking=no muralipalaka@104.211.247.210 docker run -p 8080:80 -d -name muralipalaka/angularapppipelineimg:latest'
+            sh 'ssh -o StrictHostKeyChecking=no muralipalaka@104.211.247.210 ${dockerRun}'
         }
         
       } 
