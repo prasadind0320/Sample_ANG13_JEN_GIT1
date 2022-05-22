@@ -40,10 +40,18 @@ pipeline {
     }
     stage ('Push to Docker Hub') {
         steps {
+        //Option1:
         // withCredentials([usernamePassword(credentialsId: 'Dockerhub_ID', passwordVariable: 'Dockerhub_IDPassword', usernameVariable: 'Dockerhub_IDUser')]) {
         //   sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
         //   sh 'docker push muralipalaka/angularapppipelineimg:latest'
         // }
+
+        //Option2:
+        // withCredentials([usernamePassword(credentialsId: 'Dockerhub_ID', variable: 'Dockerhub_IDCREDS']) {
+        //   sh "docker login -u -p ${Dockerhub_IDCREDS}"
+        // }
+        //   sh 'docker push muralipalaka/angularapppipelineimg:latest'
+
         script { 
             docker.withRegistry( '', registryCredential ) {
                 sh 'docker push muralipalaka/angularapppipelineimg:latest'
@@ -55,6 +63,15 @@ pipeline {
     stage ('Run the app') {
       steps {
         sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
+      } 
+    }
+    stage ('Run container on dev server') {
+        def dockerRun = 'docker run -p 8080:8080 -d -name muralipalaka/angularapppipelineimg:latest'
+      steps {
+        sshAgent(['dev-server']){
+            sh 'ssh -o StrictHostKeyChecking=no muralipalaka@104.211.247.210 ${dockerRun}'
+        }
+        
       } 
     }
     // stage('Cleaning up') { 
