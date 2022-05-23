@@ -12,11 +12,13 @@ pipeline {
         //def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
       steps {
         withCredentials([string(credentialsId: 'GITHUB_HOST_KEY', variable: 'GITHUB_HOST_KEY')]) {
-            if (fileExists('~/.ssh/known_hosts') {
+           script{
+                if (fileExists('~/.ssh/known_hosts') {
               echo 'Found'
             }else{
                 sh 'mkdir ~/.ssh && echo "$GITHUB_HOST_KEY" >> ~/.ssh/known_hosts'
             }
+           }
              
         }
         
