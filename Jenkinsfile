@@ -8,27 +8,20 @@ pipeline {
     }
     agent any
     stages { 
-    
-    stage ('Run container on dev server') {
+     stage ('Run container on dev server') {
         //def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
       steps {
-          script {
-       // withCredentials([string(credentialsId: 'GITHUB_HOST_KEY', variable: 'GITHUB_HOST_KEY')]) {
-            if (fileExists('~/.ssh/known_hosts')) {
-                sh 'rmi ~/.ssh'
+        withCredentials([string(credentialsId: 'GITHUB_HOST_KEY', variable: 'GITHUB_HOST_KEY')]) {
+            if (fileExists('~/.ssh/known_hosts') {
+              echo 'Found'
+            }else{
+                sh 'mkdir ~/.ssh && echo "$GITHUB_HOST_KEY" >> ~/.ssh/known_hosts'
             }
-          }  
-        //}
-        // sshagent(['dev-server']){
-        //     sh 'ssh -o StrictHostKeyChecking=no muralipalaka@52.172.55.86 ${dockerRun}'
-        // }
+             
+        }
+        
         
       } 
     }
-    // stage('Cleaning up') { 
-    //     steps { 
-    //         sh "docker rmi $registry:$BUILD_NUMBER" 
-    //     }
-    // }
     }
 }
