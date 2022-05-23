@@ -13,7 +13,7 @@ pipeline {
       steps {
         withCredentials([string(credentialsId: 'GITHUB_HOST_KEY', variable: 'GITHUB_HOST_KEY')]) {
            script{
-                if (fileExists('~/.ssh/known_hosts') {
+                if (fileExists('~/.ssh/known_hosts')) {
               echo 'Found'
             }else{
                 sh 'mkdir ~/.ssh && echo "$GITHUB_HOST_KEY" >> ~/.ssh/known_hosts'
