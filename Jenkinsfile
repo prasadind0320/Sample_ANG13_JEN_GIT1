@@ -69,7 +69,10 @@ pipeline {
     stage ('Run container on dev server') {
         //def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
       steps {
-        sshagent(credentials:['dev-server']){
+        withCredentials([string(credentialsId: 'GITHUB_HOST_KEY', variable: 'GITHUB_HOST_KEY')]) {
+            sh 'mkdir ~/.ssh && echo "$GITHUB_HOST_KEY" >> ~/.ssh/known_hosts'
+        }
+        sshagent(['dev-server']){
             sh 'ssh -o StrictHostKeyChecking=no muralipalaka@104.211.247.210 ${dockerRun}'
         }
         
