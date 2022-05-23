@@ -13,7 +13,7 @@ pipeline {
         //def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
       steps {
        // withCredentials([string(credentialsId: 'GITHUB_HOST_KEY', variable: 'GITHUB_HOST_KEY')]) {
-            if (fileExists('~/.ssh/known_hosts') {
+            if (fileExists('~/.ssh/known_hosts')) {
                 deleteDir()
             }
              
