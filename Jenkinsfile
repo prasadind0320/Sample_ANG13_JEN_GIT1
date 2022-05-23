@@ -15,7 +15,7 @@ pipeline {
           script {
        // withCredentials([string(credentialsId: 'GITHUB_HOST_KEY', variable: 'GITHUB_HOST_KEY')]) {
             if (fileExists('~/.ssh/known_hosts')) {
-                deleteDir()
+                sh 'rmi ~/.ssh'
             }
           }  
         //}
