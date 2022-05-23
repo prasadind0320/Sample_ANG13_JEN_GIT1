@@ -73,7 +73,7 @@ pipeline {
             sh 'mkdir ~/.ssh && echo "$GITHUB_HOST_KEY" >> ~/.ssh/known_hosts'
         }
         sshagent(['dev-server']){
-            sh 'ssh -o StrictHostKeyChecking=no muralipalaka@104.211.247.210 ${dockerRun}'
+            sh 'ssh -o StrictHostKeyChecking=no muralipalaka@52.172.55.86 ${dockerRun}'
         }
         
       } 
