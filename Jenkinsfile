@@ -12,7 +12,7 @@ pipeline {
         steps {
             git branch:'master', url: 'https://github.com/prasadind0320/Sample_ANG13_JEN_GIT1.git'
         }
-    }
+    } 
     stage ('Install dependency') {
         steps {
             sh 'npm install'
