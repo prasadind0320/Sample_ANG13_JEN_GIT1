@@ -7,14 +7,10 @@ pipeline {
         dockerRun='docker run -p 8080:80 -d -name muralipalaka/angularapppipelineimg:latest' 
     }
     agent any
-    stages { 
-    stage('Trigger Pipeline'){
-        steps{
-            triggers {
+    triggers {
                 pollSCM('') //Empty quotes tells it to build on a push
             }
-        }
-    }
+    stages { 
     stage('Checkout'){
         steps {
             git branch:'master', url: 'https://github.com/prasadind0320/Sample_ANG13_JEN_GIT1.git'
