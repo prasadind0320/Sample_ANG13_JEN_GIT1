@@ -7,9 +7,6 @@ pipeline {
         dockerRun='docker run -p 8080:80 -d -name muralipalaka/angularapppipelineimg:latest' 
     }
     agent any
-    triggers {
-                pollSCM('') //Empty quotes tells it to build on a push.
-            }
     stages { 
     stage('Checkout'){
         steps {
