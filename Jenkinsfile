@@ -61,7 +61,7 @@ pipeline {
         }
       }
     }
-    stage ('Run the app') {
+    stage ('Run the app') { 
       steps {
         sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
       } 
