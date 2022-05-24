@@ -8,6 +8,13 @@ pipeline {
     }
     agent any
     stages { 
+    stage('Trigger Pipeline'){
+        steps{
+            triggers {
+                pollSCM('') //Empty quotes tells it to build on a push
+            }
+        }
+    }
     stage('Checkout'){
         steps {
             git branch:'master', url: 'https://github.com/prasadind0320/Sample_ANG13_JEN_GIT1.git'
