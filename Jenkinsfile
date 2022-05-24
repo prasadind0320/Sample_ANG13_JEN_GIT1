@@ -61,11 +61,11 @@ pipeline {
         }
       }
     }
-    // stage ('Run the app') {
-    //   steps {
-    //     sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
-    //   } 
-    // }
+    stage ('Run the app') {
+      steps {
+        sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
+      } 
+    }
     // stage ('Run container on dev server') {
     //     //def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
     //   steps {
