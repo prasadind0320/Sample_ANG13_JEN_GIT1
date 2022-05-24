@@ -66,7 +66,7 @@ pipeline {
     //     sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
     //   } 
     // }
-    stage ('Run container on dev server') {
+    stage ('Run container on dev server ') {
         //def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
       steps {
         withCredentials([string(credentialsId: 'GITHUB_HOST_KEY', variable: 'GITHUB_HOST_KEY')]) {
