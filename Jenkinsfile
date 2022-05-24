@@ -39,7 +39,7 @@ pipeline {
         //dockerImage = docker.build registry + ":$BUILD_NUMBER"
       } 
     }
-    stage ('Push to Docker Hub') {
+    stage ('Push to the Docker Hub') {
         steps { 
         //Option1: 
         // withCredentials([usernamePassword(credentialsId: 'Dockerhub_ID', passwordVariable: 'Dockerhub_IDPassword', usernameVariable: 'Dockerhub_IDUser')]) {
