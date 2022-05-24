@@ -39,7 +39,7 @@ pipeline {
         //dockerImage = docker.build registry + ":$BUILD_NUMBER"
       } 
     }
-    stage ('Push to the Docker Hub ') {
+    stage ('Push to the Docker Hub') {
         steps { 
         //Option1: 
         // withCredentials([usernamePassword(credentialsId: 'Dockerhub_ID', passwordVariable: 'Dockerhub_IDPassword', usernameVariable: 'Dockerhub_IDUser')]) {
@@ -66,24 +66,24 @@ pipeline {
     //     sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
     //   } 
     // }
-    stage ('Run container on dev server ') {
-        //def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
-      steps {
-        withCredentials([string(credentialsId: 'GITHUB_HOST_KEY', variable: 'GITHUB_HOST_KEY')]) {
-            script{
-                if (fileExists('~/.ssh/known_hosts')) {
-                    echo "Found"
-                }else{
-                    sh 'mkdir ~/.ssh && echo "$GITHUB_HOST_KEY" >> ~/.ssh/known_hosts'
-                }
-           }
-        }
-        sshagent(['dev-server']){
-            sh 'ssh -o StrictHostKeyChecking=no muralipalaka@52.172.55.86 ${dockerRun}'
-        }
+    // stage ('Run container on dev server') {
+    //     //def dockerRun = 'docker run -p 80:80 -d -name muralipalaka/angularapppipelineimg:latest'
+    //   steps {
+    //     withCredentials([string(credentialsId: 'GITHUB_HOST_KEY', variable: 'GITHUB_HOST_KEY')]) {
+    //         script{
+    //             if (fileExists('~/.ssh/known_hosts')) {
+    //                 echo "Found"
+    //             }else{
+    //                 sh 'mkdir ~/.ssh && echo "$GITHUB_HOST_KEY" >> ~/.ssh/known_hosts'
+    //             }
+    //        }
+    //     }
+    //     sshagent(['dev-server']){
+    //         sh 'ssh -o StrictHostKeyChecking=no muralipalaka@52.172.55.86 ${dockerRun}'
+    //     }
         
-      } 
-    }
+    //   } 
+    // }
     // stage('Cleaning up') { 
     //     steps { 
     //         sh "docker rmi $registry:$BUILD_NUMBER" 
