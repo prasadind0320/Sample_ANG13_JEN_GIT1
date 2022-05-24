@@ -61,7 +61,7 @@ pipeline {
         }
       }
     }
-    stage ('Run the app') { 
+    stage ('create the container to run the image') { 
       steps {
         sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
       } 
