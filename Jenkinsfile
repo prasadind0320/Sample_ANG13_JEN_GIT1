@@ -8,7 +8,7 @@ pipeline {
     }
     agent any
     stages { 
-    stage('Checkout'){
+    stage('Checkout the code'){
         steps {
             git branch:'master', url: 'https://github.com/prasadind0320/Sample_ANG13_JEN_GIT1.git'
         }
