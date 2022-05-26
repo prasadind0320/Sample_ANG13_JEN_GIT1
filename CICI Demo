@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-26T13:22:06.450Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="tKD8VEGtLiL3YSuRA4co" version="18.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-26T13:25:17.493Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="IjuRD_L4yBsI3qQ9cnwV" version="18.1.2" type="github">
   <diagram id="tDD0XruZ_tdynOZiO7YY" name="CICD Demo">
     <mxGraphModel dx="763" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -50,6 +50,21 @@
             <Array as="points">
               <mxPoint x="490" y="259.5" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jxUDNGiMrzwkWHv8UIiA-30" value="Angular APP" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+          <mxGeometry x="70" y="255" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jxUDNGiMrzwkWHv8UIiA-35" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="265" as="sourcePoint" />
+            <mxPoint x="190" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jxUDNGiMrzwkWHv8UIiA-36" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="162" y="325" as="sourcePoint" />
+            <mxPoint x="192" y="325" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
