@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-26T15:59:54.080Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="QYTcAu-00o_5JdGZMTAG" version="18.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-26T16:01:21.537Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="OQGTqhPhvciiD9SWKNmM" version="18.1.2" type="github">
   <diagram id="tDD0XruZ_tdynOZiO7YY" name="CICD Demo">
     <mxGraphModel dx="763" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -23,10 +23,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-14" value="&lt;ul&gt;&lt;li&gt;GIT&lt;/li&gt;&lt;li&gt;Jenkins&lt;/li&gt;&lt;li&gt;SonarCude&lt;/li&gt;&lt;li&gt;Docker&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;align=left;" vertex="1" parent="1">
-          <mxGeometry x="410" y="355" width="140" height="140" as="geometry" />
+          <mxGeometry x="410" y="370" width="140" height="140" as="geometry" />
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-12" value="&lt;ul&gt;&lt;li&gt;GIT&lt;/li&gt;&lt;li&gt;Jenkins&lt;/li&gt;&lt;li&gt;SonarCude&lt;/li&gt;&lt;li&gt;NGROK&lt;/li&gt;&lt;li&gt;Docker&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" vertex="1" parent="1">
-          <mxGeometry x="410" y="100" width="140" height="140" as="geometry" />
+          <mxGeometry x="410" y="80" width="140" height="140" as="geometry" />
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-19" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="jxUDNGiMrzwkWHv8UIiA-12" target="jxUDNGiMrzwkWHv8UIiA-38">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -36,8 +36,8 @@
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-21" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="480" y="356" as="sourcePoint" />
-            <mxPoint x="480" y="326" as="targetPoint" />
+            <mxPoint x="480" y="369" as="sourcePoint" />
+            <mxPoint x="480" y="339" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-27" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;fillColor=#d5e8d4;strokeColor=#000000;dashed=1;strokeWidth=4;" edge="1" parent="1">
@@ -65,7 +65,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-38" value="Pipeline" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
-          <mxGeometry x="430" y="270" width="100" height="50" as="geometry" />
+          <mxGeometry x="430" y="250" width="100" height="90" as="geometry" />
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-48" value="Azure VM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="640" y="160" width="120" height="40" as="geometry" />
