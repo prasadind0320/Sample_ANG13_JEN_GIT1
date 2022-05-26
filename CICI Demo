@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-26T15:47:39.816Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="m89rVMYw0uLWOLFllY7h" version="18.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-26T15:59:01.323Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="aw7EPGYLt_LswqYxA5bi" version="18.1.2" type="github">
   <diagram id="tDD0XruZ_tdynOZiO7YY" name="CICD Demo">
     <mxGraphModel dx="763" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -11,7 +11,7 @@
           <mxGeometry x="190" y="310" width="200" height="40" as="geometry" />
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-8" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="590" y="170" width="210" height="210" as="geometry" />
+          <mxGeometry x="590" y="140" width="240" height="240" as="geometry" />
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-9" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;fillColor=#fa6800;strokeColor=#000000;dashed=1;strokeWidth=4;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -67,11 +67,11 @@
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-38" value="Pipeline" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
           <mxGeometry x="430" y="270" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="jxUDNGiMrzwkWHv8UIiA-44" value="Azure Registry&lt;br&gt;Access keys&lt;br&gt;Azure repository&lt;br&gt;Azure Webapp" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="635" y="255" width="120" height="110" as="geometry" />
-        </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-48" value="Azure VM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="630" y="200" width="120" height="40" as="geometry" />
+          <mxGeometry x="640" y="160" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jxUDNGiMrzwkWHv8UIiA-52" value="&lt;span style=&quot;&quot;&gt;1)Azure Registry&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;2)Access keys&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;3)Provide access to Docker using the Access Keys&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;4)Create tag for the image and push to container registry&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;5) Fourth step completion can be viewed under Azure repository&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;6)Configure Azure Webapp with container details from step1, 4&lt;br&gt;7)Browse the website....&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="605" y="210" width="210" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
