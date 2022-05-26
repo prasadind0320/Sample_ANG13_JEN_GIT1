@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-26T13:25:17.493Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="IjuRD_L4yBsI3qQ9cnwV" version="18.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-26T15:39:14.922Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="aM7Zty7Jf8hwknV-Rqpp" version="18.1.2" type="github">
   <diagram id="tDD0XruZ_tdynOZiO7YY" name="CICD Demo">
     <mxGraphModel dx="763" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -10,7 +10,7 @@
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-4" value="CICD inside the Azure" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="190" y="310" width="200" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="jxUDNGiMrzwkWHv8UIiA-8" value="Azure VM" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="jxUDNGiMrzwkWHv8UIiA-8" value="Azure VM" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="590" y="240" width="120" height="120" as="geometry" />
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-9" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;" edge="1" parent="1">
@@ -22,11 +22,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jxUDNGiMrzwkWHv8UIiA-12" value="GIT&lt;br&gt;Jenkins&lt;br&gt;SonarCude&lt;br&gt;NGROK&lt;br&gt;Docker&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="410" y="100" width="140" height="140" as="geometry" />
-        </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-14" value="GIT&lt;br&gt;Jenkins&lt;br&gt;SonarCude&lt;br&gt;NGROK&lt;br&gt;Docker&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="410" y="355" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="jxUDNGiMrzwkWHv8UIiA-12" value="GIT&lt;br&gt;Jenkins&lt;br&gt;SonarCude&lt;br&gt;NGROK&lt;br&gt;Docker&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="410" y="100" width="140" height="140" as="geometry" />
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-19" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="jxUDNGiMrzwkWHv8UIiA-12">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -39,9 +39,6 @@
             <mxPoint x="478.3599999999999" y="332" as="sourcePoint" />
             <mxPoint x="540" y="230" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="jxUDNGiMrzwkWHv8UIiA-10" value="Pipeline" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
-          <mxGeometry x="448" y="280" width="60" height="20" as="geometry" />
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-27" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -66,6 +63,9 @@
             <mxPoint x="162" y="325" as="sourcePoint" />
             <mxPoint x="192" y="325" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="jxUDNGiMrzwkWHv8UIiA-38" value="Pipeline" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="430" y="270" width="100" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
