@@ -39,7 +39,7 @@ pipeline {
         //dockerImage = docker.build registry + ":$BUILD_NUMBER"
       } 
     }
-    stage ('Push to the Docker Hub ') {
+    stage ('Push to the Docker Hub') {
         steps { 
         //Option1: 
         // withCredentials([usernamePassword(credentialsId: 'Dockerhub_ID', passwordVariable: 'Dockerhub_IDPassword', usernameVariable: 'Dockerhub_IDUser')]) {
@@ -61,7 +61,7 @@ pipeline {
         }
       }
     }
-    stage ('create the container to run the image') { 
+    stage ('Run the image to create the container') { 
       steps {
         sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
       } 
