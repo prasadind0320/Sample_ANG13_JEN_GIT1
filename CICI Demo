@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-26T16:13:34.471Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="C68yclwKAMwWM7Khwqs_" version="18.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-26T16:14:02.358Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="y7ayA33pYCFzbnl8ftOG" version="18.1.2" type="github">
   <diagram id="tDD0XruZ_tdynOZiO7YY" name="CICD Demo">
     <mxGraphModel dx="763" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -68,7 +68,7 @@
           <mxGeometry x="430" y="250" width="100" height="90" as="geometry" />
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-48" value="Azure VM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="660" y="170" width="120" height="40" as="geometry" />
+          <mxGeometry x="685" y="170" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-52" value="&lt;span style=&quot;&quot;&gt;1)Azure Registry&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;2)Access keys&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;3)Provide access to Docker using the Access Keys&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;4)Create tag for the image and push to container registry&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;5) Fourth step completion can be viewed under Azure repository&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;6)Configure Azure Webapp with container details from step1, 4&lt;br&gt;7)Browse the website....&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="630" y="220" width="230" height="190" as="geometry" />
