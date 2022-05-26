@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-26T15:39:14.922Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="aM7Zty7Jf8hwknV-Rqpp" version="18.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-26T15:39:39.862Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="lpftnaeRbd2BIsiYkp6R" version="18.1.2" type="github">
   <diagram id="tDD0XruZ_tdynOZiO7YY" name="CICD Demo">
     <mxGraphModel dx="763" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -22,7 +22,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jxUDNGiMrzwkWHv8UIiA-14" value="GIT&lt;br&gt;Jenkins&lt;br&gt;SonarCude&lt;br&gt;NGROK&lt;br&gt;Docker&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="jxUDNGiMrzwkWHv8UIiA-14" value="GIT&lt;br&gt;Jenkins&lt;br&gt;SonarCude&lt;br&gt;Docker" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="410" y="355" width="140" height="140" as="geometry" />
         </mxCell>
         <mxCell id="jxUDNGiMrzwkWHv8UIiA-12" value="GIT&lt;br&gt;Jenkins&lt;br&gt;SonarCude&lt;br&gt;NGROK&lt;br&gt;Docker&lt;br&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
