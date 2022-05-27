@@ -63,7 +63,7 @@ pipeline {
     }
     stage ('Run the image to create the container ') { 
       steps {
-        sh 'docker run -it -p 4000:4050 muralipalaka/angularapppipelineimg:latest'
+        sh 'docker run -d -p 8080:83 muralipalaka/angularapppipelineimg:latest'
       } 
     }
     // stage ('Run container on dev server') {
