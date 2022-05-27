@@ -61,7 +61,7 @@ pipeline {
         }
       }
     }
-    stage ('Run the image to create the container') { 
+    stage ('Run the image to create the container ') { 
       steps {
         sh 'docker run -d -p 80:80 muralipalaka/angularapppipelineimg:latest'
       } 
