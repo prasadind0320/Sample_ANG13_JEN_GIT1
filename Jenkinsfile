@@ -65,7 +65,7 @@ pipeline {
       steps {
         //sh 'docker image rm muralipalaka/angularapppipelineimg:latest'
         sh 'docker stop angularapppipelineimg && docker rm angularapppipelineimg || exit 0;'
-        sh 'docker run -p 8080:8080 -d --name angularapppipelineimg  muralipalaka/angularapppipelineimg:latest'
+        sh 'docker run -p 1111:80 -d --name angularapppipelineimg  muralipalaka/angularapppipelineimg:latest'
       } 
     }
     // stage ('Run container on dev server') {
