@@ -33,7 +33,7 @@ pipeline {
             sh 'npm run build'
         }
     }
-    stage ('Create Docker Image ') {
+    stage ('Create Docker Image') {
       steps {
         sh 'docker build -t muralipalaka/angularapppipelineimg:latest .'
         //dockerImage = docker.build registry + ":$BUILD_NUMBER"
