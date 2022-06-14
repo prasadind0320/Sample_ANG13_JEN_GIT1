@@ -61,7 +61,7 @@ pipeline {
         }
       }
     }
-    stage ('Run the image to create the container ') { 
+    stage ('Run the image to create the container') { 
       steps {
         //sh 'docker image rm muralipalaka/angularapppipelineimg:latest'
         sh 'docker stop angularapppipelineimg && docker rm angularapppipelineimg || exit 0;'
